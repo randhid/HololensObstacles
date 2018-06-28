@@ -1,0 +1,2 @@
+C:\Users\SiddharthChamarthy\Documents\GitHub\HololensObstacles\Projects\anchortrial\AnchorTrial\App\AnchorTrial\AnchorTrial.csproj;x86
+C:\Users\SiddharthChamarthy\Documents\GitHub\HololensObstacles\Projects\anchortrial\AnchorTrial\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86

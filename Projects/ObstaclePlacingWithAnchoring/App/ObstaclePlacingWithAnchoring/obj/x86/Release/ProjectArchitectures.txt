@@ -1,0 +1,2 @@
+C:\Users\SiddharthChamarthy\Documents\GitHub\HololensObstacles\Projects\ObstaclePlacingWithAnchoring\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
+C:\Users\SiddharthChamarthy\Documents\GitHub\HololensObstacles\Projects\ObstaclePlacingWithAnchoring\App\ObstaclePlacingWithAnchoring\ObstaclePlacingWithAnchoring.csproj;x86

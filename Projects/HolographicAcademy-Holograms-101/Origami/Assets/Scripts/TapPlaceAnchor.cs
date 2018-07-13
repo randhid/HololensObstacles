@@ -24,7 +24,6 @@ public class TapPlaceAnchor : MonoBehaviour
         string[] ids = anchorStore.GetAllIds();
         for (int index = 0; index < ids.Length; index++)
         {
-            Debug.Log(ids[index]);
             if (ids[index] == ObjectAnchorStoreName)
             {
                 WorldAnchor wa = anchorStore.Load(ids[index], gameObject);
@@ -38,9 +37,7 @@ public class TapPlaceAnchor : MonoBehaviour
     void Update()
     {
         if (Placing)
-        {   //            gameObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 2; this line is the only line that has to uncommented for the original 
-
-
+        {   
             // Do a raycast into the world that will only hit the Spatial Mapping mesh.
             var headPosition = Camera.main.transform.position;
             var gazeDirection = Camera.main.transform.forward;
@@ -51,13 +48,13 @@ public class TapPlaceAnchor : MonoBehaviour
             {
                 // Move this object's parent object to
                 // where the raycast hit the Spatial Mapping mesh.
-                gameObject.transform.position = hitInfo.point;
+                this.transform.parent.position = hitInfo.point;
 
                 // Rotate this object's parent object to face the user.
                 Quaternion toQuat = Camera.main.transform.localRotation;
                 toQuat.x = 0;
                 toQuat.z = 0;
-                gameObject.transform.rotation = toQuat;
+                this.transform.parent.rotation = toQuat;
             }
         }
     }
@@ -94,7 +91,6 @@ public class TapPlaceAnchor : MonoBehaviour
                 string[] ids = anchorStore.GetAllIds();
                 for (int index = 0; index < ids.Length; index++)
                 {
-                    Debug.Log(ids[index]);
                     if (ids[index] == ObjectAnchorStoreName)
                     {
                         bool deleted = anchorStore.Delete(ids[index]);

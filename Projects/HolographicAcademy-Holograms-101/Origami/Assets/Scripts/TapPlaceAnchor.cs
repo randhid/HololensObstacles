@@ -4,7 +4,9 @@ using UnityEngine.XR.WSA;
 
 public class TapPlaceAnchor : MonoBehaviour
 {
-
+    public float xlength;
+    public float stepheight;
+    public float steplength;
     public string ObjectAnchorStoreName;
 
     WorldAnchorStore anchorStore;
@@ -54,7 +56,9 @@ public class TapPlaceAnchor : MonoBehaviour
                 Quaternion toQuat = Camera.main.transform.localRotation;
                 toQuat.x = 0;
                 toQuat.z = 0;
+
                 this.transform.parent.rotation = toQuat;
+
             }
         }
     }
@@ -73,6 +77,8 @@ public class TapPlaceAnchor : MonoBehaviour
                 if (attachingAnchor.isLocated)
                 {
                     bool saved = anchorStore.Save(ObjectAnchorStoreName, attachingAnchor);
+                    this.transform.position = new Vector3(0, stepheight / 2, steplength / 2);
+                    this.transform.localScale = new Vector3(xlength, stepheight, steplength);
                 }
                 else
                 {

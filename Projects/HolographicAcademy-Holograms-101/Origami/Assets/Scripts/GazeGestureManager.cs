@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿//
+// Copyright (C) Microsoft. All rights reserved.
+//
+
+using UnityEngine;
 using UnityEngine.XR.WSA.Input;
 
 public class GazeGestureManager : MonoBehaviour
